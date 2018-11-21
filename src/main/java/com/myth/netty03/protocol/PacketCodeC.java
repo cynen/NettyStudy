@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class PacketCodeC {
     // 魔法数字.为了限制应用层http协议自动解析做一个前缀.
     private static final int MAGIC_NUMBER = 0x12345678;
-
+    public static final PacketCodeC INSTANCE = new PacketCodeC();
     // 2个Map对象,分别存储Packet的映射
     private  static  Map<Byte,Class<? extends Packet>> packetTypeMap;
     // 存储序列化方法的Map
