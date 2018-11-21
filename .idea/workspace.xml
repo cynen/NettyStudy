@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8b0c7e1-9f44-4f0c-8ce3-6c83b4444986" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/client/NettyClient01$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/client/NettyClient01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/server/NettyServer01$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/server/NettyServer01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/bytebuf/ByteBufTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/client/NettyClient02$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/client/NettyClient02$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/client/NettyClient02.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/handler/FirstClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/handler/FirstServerHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/server/NettyServer02$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/server/NettyServer02$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/server/NettyServer02.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/myth/AppTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="a8b0c7e1-9f44-4f0c-8ce3-6c83b4444986" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +37,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="8" />
-          <entry key="java" value="8" />
-          <entry key="md" value="4" />
+          <entry key="java" value="9" />
+          <entry key="md" value="5" />
           <entry key="pom" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -62,15 +46,40 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="JAVA" value="8" />
-          <entry key="Markdown" value="4" />
+          <entry key="JAVA" value="9" />
+          <entry key="Markdown" value="5" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/netty02/bytebuf/ByteBufTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="88">
+                <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,7 +140,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1346" />
@@ -305,36 +314,6 @@
               <item name="NettyStudy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="NettyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NettyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NettyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NettyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NettyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NettyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NettyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NettyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="myth" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -424,7 +403,8 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
@@ -437,7 +417,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40819672" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36557376" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -631,11 +611,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/netty02/bytebuf/ByteBufTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="74">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="88">
+            <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
