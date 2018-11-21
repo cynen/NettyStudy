@@ -3,6 +3,7 @@ package com.myth.netty03.protocol;
 import com.alibaba.fastjson.JSON;
 import com.myth.netty03.protocol.command.Command;
 import com.myth.netty03.protocol.request.LoginRequestPacket;
+import com.myth.netty03.protocol.response.LoginResponsePacket;
 import com.myth.netty03.serialize.MySerializer;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -24,8 +25,10 @@ public class PacketCodeC {
 
     // 静态代码块初始化其对象.
     static {
+        // 一定要配置对应的Command指令.
         packetTypeMap = new ConcurrentHashMap<>();
         packetTypeMap.put(Command.LOGIN_REQUEST, LoginRequestPacket.class);
+        packetTypeMap.put(Command.LOGIN_RESPONSE, LoginResponsePacket.class);
 
         serializerMap = new ConcurrentHashMap<>();
         MySerializer  serializer = MySerializer.DEFAULT;
