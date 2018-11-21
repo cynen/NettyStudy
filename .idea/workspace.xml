@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8b0c7e1-9f44-4f0c-8ce3-6c83b4444986" name="Default Changelist" comment="" />
+    <list default="true" id="a8b0c7e1-9f44-4f0c-8ce3-6c83b4444986" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/client/NettyClient01$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/client/NettyClient01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/server/NettyServer01$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty01/server/NettyServer01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/bytebuf/ByteBufTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/client/NettyClient02$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/client/NettyClient02$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/client/NettyClient02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/handler/FirstClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/handler/FirstServerHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/server/NettyServer02$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/server/NettyServer02$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myth/netty02/server/NettyServer02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/myth/AppTest.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,38 +70,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/netty02/bytebuf/ByteBufTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../../maven/repository/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final.jar!/io/netty/buffer/AbstractByteBuf.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="221" selection-start-line="221" selection-end-line="221" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../../maven/repository/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final.jar!/io/netty/buffer/AbstractByteBufAllocator.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="188" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,6 +78,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,7 +131,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1346" />
@@ -298,6 +286,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -345,16 +334,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="myth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NettyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NettyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="myth" type="462c0819:PsiDirectoryNode" />
-              <item name="netty02" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -446,11 +425,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49786323" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49786323" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" sideWeight="0.50213677" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
@@ -459,7 +437,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40752864" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40819672" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
