@@ -31,7 +31,9 @@ public class MessageRequestHandler extends SimpleChannelInboundHandler<MessageRe
             toUserChannel.writeAndFlush(messageResponsePacket);
         }else {
             // 这个消息,原本是应该回送给发送方.
-            System.err.println("["+messageRequestPacket.getToUserId()+"]不在线,发送消息失败");
+            messageResponsePacket.setSucess(false);
+            messageResponsePacket.setMessage("["+messageRequestPacket.getToUserId()+"]不在线,发送消息失败");
+            ctx.channel().writeAndFlush(messageResponsePacket);
         }
 
 

@@ -4,7 +4,16 @@ import com.netty.protocol.Packet;
 import com.netty.protocol.command.Command;
 
 public class MessageResponsePacket  extends Packet {
+    private  boolean sucess;
     private String fromUserId;
+
+    public boolean isSucess() {
+        return sucess;
+    }
+
+    public void setSucess(boolean sucess) {
+        this.sucess = sucess;
+    }
 
     private String fromUserName;
 

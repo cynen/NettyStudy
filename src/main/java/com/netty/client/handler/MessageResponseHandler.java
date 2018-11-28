@@ -8,10 +8,14 @@ public class MessageResponseHandler extends SimpleChannelInboundHandler<MessageR
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, MessageResponsePacket messageResponsePacket) throws Exception {
         // 接受消息方,收到了发送过来的消息.
-        String fromUserName = messageResponsePacket.getFromUserName();
-        String fromUserId = messageResponsePacket.getFromUserId();
+        if (messageResponsePacket.isSucess()){
+            String fromUserName = messageResponsePacket.getFromUserName();
+            String fromUserId = messageResponsePacket.getFromUserId();
 
-        System.out.println(fromUserName +"["+fromUserId+"] 说 : " + messageResponsePacket.getMessage());
+            System.out.println(fromUserName +"["+fromUserId+"] 说 : " + messageResponsePacket.getMessage());
+        }else {
+            System.err.println(messageResponsePacket.getMessage());
+        }
 
 
 
