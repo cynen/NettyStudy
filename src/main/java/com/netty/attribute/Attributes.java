@@ -1,7 +1,6 @@
 package com.netty.attribute;
 
 import com.netty.session.Session;
-import io.netty.util.Attribute;
 import io.netty.util.AttributeKey;
 
 public interface Attributes {

@@ -1,11 +1,10 @@
 package com.netty.server.handler;
 
-import com.netty.codec.PacketCodeC;
 import com.netty.protocol.request.LoginRequestPacket;
 import com.netty.protocol.response.LoginResponsePacket;
-import io.netty.buffer.ByteBuf;
+import com.netty.session.Session;
+import com.netty.utils.SessionUtils;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.util.UUID;
@@ -21,9 +20,14 @@ public class ServerLoginHandler extends SimpleChannelInboundHandler<LoginRequest
         responsePacket.setUserName(packet.getUsername());
 
         if (validateUser(packet)){
+            // 如果用户校验通过,name表示用户登录成功.
             responsePacket.setSuccess(true);
             String userid = getUserid();
             responsePacket.setUserId(userid);
+            // 创建一个Session,绑定到当前的channel
+            Session session = new Session(userid,packet.getUsername());
+            // 将当前登录的客户端与对应的Session绑定. (此时是服务器端的操作.)
+            SessionUtils.bindSession(ctx.channel(),session);
 
         }else {
             responsePacket.setSuccess(false);

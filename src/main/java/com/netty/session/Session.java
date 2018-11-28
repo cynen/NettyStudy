@@ -4,7 +4,7 @@ public class Session {
     private  String userName;
     private String userId;
 
-    public Session(String userId,String userName){
+    public Session(String userId, String userName){
         // 自定义的Session包含的信息.
         this.userId = userId;
         this.userName = userName;

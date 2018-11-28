@@ -2,6 +2,8 @@ package com.netty.client.handler;
 
 import com.netty.attribute.Attributes;
 import com.netty.protocol.response.LoginResponsePacket;
+import com.netty.session.Session;
+import com.netty.utils.SessionUtils;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
@@ -14,7 +16,9 @@ public class ClientLoginHandler extends SimpleChannelInboundHandler<LoginRespons
 
         if (packet.isSuccess()){
             System.out.println("["+userName+"]登录成功,用户Id为:" + userId);
-            ctx.channel().attr(Attributes.LOGINON).set(true);
+            // 登录成功,构建本地Session
+            SessionUtils.bindSession(ctx.channel(),new Session(userId,userName));
+            // ctx.channel().attr(Attributes.LOGINON).set(true);
         }else {
             System.out.println("["+userName+"]登录失败,原因:" + packet.getReason());
         }

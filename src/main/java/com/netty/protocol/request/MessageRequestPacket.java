@@ -1,6 +1,7 @@
 package com.netty.protocol.request;
 
 import com.netty.protocol.Packet;
+import com.netty.protocol.command.Command;
 
 public class MessageRequestPacket extends Packet {
     private String msg;
@@ -28,6 +29,6 @@ public class MessageRequestPacket extends Packet {
 
     @Override
     public Byte getCommand() {
-        return null;
+        return Command.MESSAGE_REQUEST;
     }
 }

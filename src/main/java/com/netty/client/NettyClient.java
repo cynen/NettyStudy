@@ -2,12 +2,13 @@ package com.netty.client;
 
 
 import com.netty.client.handler.ClientLoginHandler;
+import com.netty.client.handler.MessageResponseHandler;
 import com.netty.codec.PacketDecoder;
 import com.netty.codec.PacketEncoder;
 import com.netty.codec.Spliter;
 import com.netty.protocol.request.LoginRequestPacket;
 import com.netty.protocol.request.MessageRequestPacket;
-import com.netty.utils.LoginUtils;
+import com.netty.utils.SessionUtils;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -48,6 +49,7 @@ public class NettyClient {
                         ch.pipeline().addLast(new Spliter());
                         ch.pipeline().addLast(new PacketDecoder());
                         ch.pipeline().addLast(new ClientLoginHandler());
+                        ch.pipeline().addLast(new MessageResponseHandler());
                         ch.pipeline().addLast(new PacketEncoder());
                     }
                 });
@@ -84,7 +86,7 @@ public class NettyClient {
                 e.printStackTrace();
             }
             while (!Thread.interrupted()){
-                if (!LoginUtils.hasLogin(channel)){
+                if (!SessionUtils.hasLogin(channel)){
                     // 尚未登录
                     System.out.print("输入用户名登录: ");
                     String username = sc.nextLine();
@@ -98,6 +100,7 @@ public class NettyClient {
                     waitForLoginResponse();
                 }else {
                     // 登录才能操作...
+                    // System.out.print("输入指令:  ");
                     String toUserId = sc.next();
                     String message = sc.next();
                     channel.writeAndFlush(new MessageRequestPacket(toUserId, message));

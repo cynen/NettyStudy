@@ -3,6 +3,8 @@ package com.netty.server;
 import com.netty.codec.PacketDecoder;
 import com.netty.codec.PacketEncoder;
 import com.netty.codec.Spliter;
+import com.netty.server.handler.AuthHandler;
+import com.netty.server.handler.MessageRequestHandler;
 import com.netty.server.handler.ServerLoginHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
@@ -40,7 +42,9 @@ public class NettyServer {
                 // 添加Handler进行处理.
                 ch.pipeline().addLast(new Spliter());
                 ch.pipeline().addLast(new PacketDecoder());
-                ch.pipeline().addLast(new ServerLoginHandler());
+                ch.pipeline().addLast(new ServerLoginHandler()); //接受登录请求.
+                ch.pipeline().addLast(new AuthHandler());// 鉴权
+                ch.pipeline().addLast(new MessageRequestHandler()); // 处理客户端消息.
                 ch.pipeline().addLast(new PacketEncoder());
             }
         }).handler(new ChannelInitializer<NioServerSocketChannel>() {
