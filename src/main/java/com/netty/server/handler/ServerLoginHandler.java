@@ -3,6 +3,7 @@ package com.netty.server.handler;
 import com.netty.protocol.request.LoginRequestPacket;
 import com.netty.protocol.response.LoginResponsePacket;
 import com.netty.session.Session;
+import com.netty.utils.IDUtils;
 import com.netty.utils.SessionUtils;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -22,7 +23,7 @@ public class ServerLoginHandler extends SimpleChannelInboundHandler<LoginRequest
         if (validateUser(packet)){
             // 如果用户校验通过,name表示用户登录成功.
             responsePacket.setSuccess(true);
-            String userid = getUserid();
+            String userid = IDUtils.getUUID();
             responsePacket.setUserId(userid);
             // 创建一个Session,绑定到当前的channel
             Session session = new Session(userid,packet.getUsername());
@@ -38,7 +39,5 @@ public class ServerLoginHandler extends SimpleChannelInboundHandler<LoginRequest
     private boolean validateUser(LoginRequestPacket packet){
         return true;
     }
-    private  String getUserid(){
-        return UUID.randomUUID().toString().substring(0,8);
-    }
+
 }

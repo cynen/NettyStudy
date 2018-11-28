@@ -2,8 +2,10 @@ package com.netty.codec;
 
 import com.netty.protocol.Packet;
 import com.netty.protocol.command.Command;
+import com.netty.protocol.request.CreateGroupRequestPacket;
 import com.netty.protocol.request.LoginRequestPacket;
 import com.netty.protocol.request.MessageRequestPacket;
+import com.netty.protocol.response.CreateGroupResponsePacket;
 import com.netty.protocol.response.LoginResponsePacket;
 import com.netty.protocol.response.MessageResponsePacket;
 import com.netty.serialize.MySerializer;
@@ -34,6 +36,9 @@ public class PacketCodeC {
         packetTypeMap.put(Command.LOGIN_RESPONSE, LoginResponsePacket.class);
         packetTypeMap.put(Command.MESSAGE_REQUEST, MessageRequestPacket.class);
         packetTypeMap.put(Command.MESSAGE_RESPONSE, MessageResponsePacket.class);
+
+        packetTypeMap.put(Command.CREATE_GROUP_REQUEST, CreateGroupRequestPacket.class);
+        packetTypeMap.put(Command.CREATE_GROUP_RESPONSE, CreateGroupResponsePacket.class);
 
         serializerMap = new HashMap<>();
         MySerializer serializer =  new JSONSerialize(); // 自定义序列化

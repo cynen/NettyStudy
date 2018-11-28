@@ -4,6 +4,7 @@ import com.netty.codec.PacketDecoder;
 import com.netty.codec.PacketEncoder;
 import com.netty.codec.Spliter;
 import com.netty.server.handler.AuthHandler;
+import com.netty.server.handler.CreateGroupRequestHandler;
 import com.netty.server.handler.MessageRequestHandler;
 import com.netty.server.handler.ServerLoginHandler;
 import io.netty.bootstrap.ServerBootstrap;
@@ -45,6 +46,7 @@ public class NettyServer {
                 ch.pipeline().addLast(new ServerLoginHandler()); //接受登录请求.
                 ch.pipeline().addLast(new AuthHandler());// 鉴权
                 ch.pipeline().addLast(new MessageRequestHandler()); // 处理客户端消息.
+                ch.pipeline().addLast(new CreateGroupRequestHandler());
                 ch.pipeline().addLast(new PacketEncoder());
             }
         }).handler(new ChannelInitializer<NioServerSocketChannel>() {

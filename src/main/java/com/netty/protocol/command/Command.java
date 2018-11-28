@@ -11,5 +11,12 @@ public interface Command {
     Byte MESSAGE_REQUEST = 3; // Client端发送的消息
     Byte MESSAGE_RESPONSE = 4; // Server端回复的消息.
 
+    Byte LOGOUT_REQUEST = 5; // 登出请求
+
+    Byte LOGOUT_RESPONSE = 6; // 登出响应.
+
+    Byte CREATE_GROUP_REQUEST = 7; // 建群请求
+
+    Byte CREATE_GROUP_RESPONSE = 8; // 建群响应
 
 }

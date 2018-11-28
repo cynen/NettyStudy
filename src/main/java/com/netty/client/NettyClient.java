@@ -2,10 +2,12 @@ package com.netty.client;
 
 
 import com.netty.client.handler.ClientLoginHandler;
+import com.netty.client.handler.CreateGroupResponsehandler;
 import com.netty.client.handler.MessageResponseHandler;
 import com.netty.codec.PacketDecoder;
 import com.netty.codec.PacketEncoder;
 import com.netty.codec.Spliter;
+import com.netty.protocol.request.CreateGroupRequestPacket;
 import com.netty.protocol.request.LoginRequestPacket;
 import com.netty.protocol.request.MessageRequestPacket;
 import com.netty.utils.SessionUtils;
@@ -50,6 +52,7 @@ public class NettyClient {
                         ch.pipeline().addLast(new PacketDecoder());
                         ch.pipeline().addLast(new ClientLoginHandler());
                         ch.pipeline().addLast(new MessageResponseHandler());
+                        ch.pipeline().addLast(new CreateGroupResponsehandler());
                         ch.pipeline().addLast(new PacketEncoder());
                     }
                 });
@@ -100,10 +103,15 @@ public class NettyClient {
                     waitForLoginResponse();
                 }else {
                     // 登录才能操作...
-                    // System.out.print("输入指令:  ");
-                    String toUserId = sc.next();
-                    String message = sc.next();
-                    channel.writeAndFlush(new MessageRequestPacket(toUserId, message));
+                    // 初略的处理.用户登录完成之后,
+                    // 输入任意指令, 后面拼接上所有用户id,即可建群.
+                    String command = sc.next();
+                    String useridList = sc.next();
+                    CreateGroupRequestPacket packet = new CreateGroupRequestPacket();
+                    for (String userId: useridList.split(",")){
+                        packet.getUserIdList().add(userId);
+                    }
+                    channel.writeAndFlush(packet);
                 }
             }
         }).start();
