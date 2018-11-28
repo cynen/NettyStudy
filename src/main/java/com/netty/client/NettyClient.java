@@ -1,6 +1,9 @@
 package com.netty.client;
 
 
+import com.netty.client.console.ConsoleCommand;
+import com.netty.client.console.ConsoleCommandManager;
+import com.netty.client.console.LoginConsoleCommand;
 import com.netty.client.handler.ClientLoginHandler;
 import com.netty.client.handler.CreateGroupResponsehandler;
 import com.netty.client.handler.MessageResponseHandler;
@@ -79,50 +82,31 @@ public class NettyClient {
     }
 
     private  static void startConsole(Channel channel){
+        ConsoleCommandManager consoleCommandManager = new ConsoleCommandManager();
+        LoginConsoleCommand loginConsoleCommand = new LoginConsoleCommand();
         Scanner sc = new Scanner(System.in);
-        LoginRequestPacket loginRequestPacket = new LoginRequestPacket();
+
         // 启动控制台,输入数据.
         new Thread(()->{
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             while (!Thread.interrupted()){
                 if (!SessionUtils.hasLogin(channel)){
-                    // 尚未登录
-                    System.out.print("输入用户名登录: ");
-                    String username = sc.nextLine();
-                    loginRequestPacket.setUsername(username);
-
-                    // 密码使用默认的
-                    loginRequestPacket.setPwd("pwd");
-
-                    // 发送登录数据包
-                    channel.writeAndFlush(loginRequestPacket);
-                    waitForLoginResponse();
+                    loginConsoleCommand.exec(sc,channel);
                 }else {
                     // 登录才能操作...
                     // 初略的处理.用户登录完成之后,
                     // 输入任意指令, 后面拼接上所有用户id,即可建群.
-                    String command = sc.next();
-                    String useridList = sc.next();
-                    CreateGroupRequestPacket packet = new CreateGroupRequestPacket();
-                    for (String userId: useridList.split(",")){
-                        packet.getUserIdList().add(userId);
-                    }
-                    channel.writeAndFlush(packet);
+                    consoleCommandManager.exec(sc,channel);
                 }
             }
         }).start();
 
     }
-    private static void waitForLoginResponse() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException ignored) {
-        }
-    }
+
     /**
      * 提供一个可以带重连机制的重试机制.
      * @param bootstrap
