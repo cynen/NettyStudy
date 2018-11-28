@@ -1,7 +1,6 @@
 package com.netty.client;
 
 
-import com.netty.client.handler.ClientHandler;
 import com.netty.client.handler.ClientLoginHandler;
 import com.netty.codec.PacketDecoder;
 import com.netty.codec.PacketEncoder;
